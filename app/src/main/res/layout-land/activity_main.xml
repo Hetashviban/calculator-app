@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:paddingBottom="23dp"
+    tools:context=".MainActivity">
+
+    <!--Row 1-->
+
+    <!--Row 2-->
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_width="@dimen/row_width"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/column"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465">
+
+        <Button
+            android:id="@+id/clear"
+            style="@style/delete_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row2_h"
+            android:layout_marginEnd="@dimen/margin"
+            android:text="C"
+            app:cornerRadius="@dimen/corner_radius" />
+
+        <Button
+            android:id="@+id/plus_minus"
+            style="@style/operator_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row2_h"
+            android:layout_marginEnd="@dimen/margin"
+            android:text="±"
+            app:cornerRadius="@dimen/corner_radius" />
+
+        <Button
+            android:id="@+id/percent"
+            style="@style/operator_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row2_h"
+            android:layout_marginEnd="@dimen/margin"
+            android:text="%"
+            app:cornerRadius="@dimen/corner_radius" />
+    </LinearLayout>
+
+    <!--Row 3-->
+    <LinearLayout
+        android:id="@+id/row3"
+        android:layout_width="@dimen/row_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/row_m_top"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1">
+
+        <Button
+            android:id="@+id/seven"
+            style="@style/number_button_land"
+            android:layout_width="@dimen/number_width_land"
+            android:text="7"
+            app:cornerRadius="@dimen/corner_radius" />
+
+        <Button
+            android:id="@+id/eight"
+            style="@style/number_button_land"
+            android:text="8"
+            app:cornerRadius="@dimen/corner_radius" />
+
+        <Button
+            android:id="@+id/nine"
+            style="@style/number_button_land"
+            android:text="9"
+            app:cornerRadius="@dimen/corner_radius" />
+    </LinearLayout>
+
+    <!--Row 4-->
+    <LinearLayout
+        android:id="@+id/row4"
+        android:layout_width="@dimen/row_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/row_m_top"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55">
+
+        <Button
+            android:id="@+id/four"
+            style="@style/number_button_land"
+            android:text="4"
+            app:cornerRadius="@dimen/corner_radius" />
+
+        <Button
+            android:id="@+id/five"
+            style="@style/number_button_land"
+            android:text="5"
+            app:cornerRadius="@dimen/corner_radius" />
+
+        <Button
+            android:id="@+id/six"
+            style="@style/number_button_land"
+            android:text="6"
+            app:cornerRadius="@dimen/corner_radius" />
+    </LinearLayout>
+
+    <!--Row 5-->
+    <LinearLayout
+        android:id="@+id/row5"
+        android:layout_width="@dimen/row_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="201dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/one"
+            style="@style/number_button_land"
+            android:text="1"
+            app:cornerRadius="@dimen/corner_radius" />
+
+        <Button
+            android:id="@+id/two"
+            style="@style/number_button_land"
+            android:text="2"
+            app:cornerRadius="@dimen/corner_radius" />
+
+        <Button
+            android:id="@+id/three"
+            style="@style/number_button_land"
+            android:text="3"
+            app:cornerRadius="@dimen/corner_radius" />
+
+    </LinearLayout>
+
+    <!--Row 6-->
+
+    <!--Column-->
+    <LinearLayout
+        android:id="@+id/column1"
+        android:layout_width="91dp"
+        android:layout_height="256dp"
+        android:layout_marginEnd="194dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/column"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toEndOf="@+id/row4"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        app:layout_constraintVertical_bias="0.77">
+
+        <Button
+            android:id="@+id/delete"
+            style="@style/number_button_land"
+            android:layout_width="@dimen/delete_row_width"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            app:cornerRadius="@dimen/corner_radius" />
+
+        <Button
+            android:id="@+id/zero"
+            style="@style/number_button_land"
+            android:layout_width="match_parent"
+            android:text="0"
+            app:cornerRadius="@dimen/corner_radius" />
+
+        <Button
+            android:id="@+id/decimal"
+            style="@style/number_button_land"
+            android:layout_width="match_parent"
+            android:text="."
+            app:cornerRadius="@dimen/corner_radius" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/column"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/divide"
+            style="@style/operator_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row2_h"
+            android:text="÷"
+            app:cornerRadius="@dimen/corner_radius" />
+
+        <Button
+            android:id="@+id/multiply"
+            style="@style/operator_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/col_height"
+            android:text="×"
+            app:cornerRadius="@dimen/corner_radius" />
+
+        <Button
+            android:id="@+id/minus"
+            style="@style/operator_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/col_height"
+            android:text="-"
+            app:cornerRadius="@dimen/corner_radius" />
+
+        <Button
+            android:id="@+id/plus"
+            style="@style/operator_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/col_height"
+            android:text="+"
+            app:cornerRadius="@dimen/corner_radius" />
+
+        <Button
+            android:id="@+id/equals"
+            style="@style/operator_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/equals_height"
+            android:text="="
+            app:cornerRadius="@dimen/corner_radius" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1">
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_m"
+            android:layout_marginEnd="@dimen/text_m"
+            android:fontFamily="@font/questrial"
+            android:text="0"
+            android:textAlignment="viewEnd"
+            android:textSize="@dimen/result_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

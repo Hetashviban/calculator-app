@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Portrait Orientation -->
+    <dimen name="row_width">264dp</dimen>
+    <dimen name="delete_row_width">150dp</dimen>
+    <dimen name="corner_radius">17dp</dimen>
+    <dimen name="number_width">60dp</dimen>
+    <dimen name="number_height">83dp</dimen>
+    <dimen name="number_text_size">30dp</dimen>
+    <dimen name="margin">10dp</dimen>
+    <dimen name="row2_h">65dp</dimen>
+    <dimen name="col_height">68dp</dimen>
+    <dimen name="equals_height">144dp</dimen>
+    <dimen name="text_m">25sp</dimen>
+    <dimen name="result_text_size">50sp</dimen>
+    <dimen name="row_m_top">101dp</dimen>
+    <dimen name="clear_button_text">24sp</dimen>
+
+    <!-- Landscape Orientation -->
+    <dimen name="number_width_land">30sp</dimen>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="number_button" parent="Widget.Material3.Button">
+        <item name="android:layout_width">@dimen/number_width</item>
+        <item name="android:layout_height">@dimen/number_height</item>
+        <item name="android:layout_marginEnd">@dimen/margin</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:backgroundTint">@color/numberButtons</item>
+        <item name="android:fontFamily">@font/questrial</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/number_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="operator_button" parent="Widget.Material3.Button">
+        <item name="android:layout_weight">1</item>
+        <item name="android:backgroundTint">@color/operatorButtons</item>
+        <item name="android:fontFamily">@font/questrial</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="delete_button" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/clearButtons</item>
+        <item name="android:fontFamily">@font/questrial</item>
+        <item name="android:textSize">@dimen/clear_button_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+
+
+    <!-- Landscape Orientation -->
+    <style name="number_button_land" parent="Widget.Material3.Button">
+        <item name="android:layout_width">@dimen/number_width_land</item>
+        <item name="android:layout_height">@dimen/number_height</item>
+        <item name="android:layout_marginEnd">@dimen/margin</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:backgroundTint">@color/numberButtons</item>
+        <item name="android:fontFamily">@font/questrial</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/number_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
