@@ -71,7 +71,7 @@
             android:layout_height="@dimen/row2_h"
             style="@style/operator_button"
             android:text="%"
-            android:tag="%"
+            android:tag="percent"
             android:layout_marginEnd="@dimen/margin"
             app:cornerRadius="@dimen/corner_radius" />
     </LinearLayout>
@@ -233,7 +233,7 @@
             android:layout_height="@dimen/row2_h"
             style="@style/operator_button"
             android:text="÷"
-            android:tag="÷"
+            android:tag="divide"
             app:cornerRadius="@dimen/corner_radius" />
 
         <Button
@@ -242,7 +242,7 @@
             android:layout_height="@dimen/col_height"
             style="@style/operator_button"
             android:text="×"
-            android:tag="×"
+            android:tag="multiply"
             app:cornerRadius="@dimen/corner_radius" />
 
         <Button
@@ -251,7 +251,7 @@
             android:layout_height="@dimen/col_height"
             style="@style/operator_button"
             android:text="-"
-            android:tag="-"
+            android:tag="minus"
             app:cornerRadius="@dimen/corner_radius" />
 
         <Button
@@ -260,7 +260,7 @@
             android:layout_height="@dimen/col_height"
             style="@style/operator_button"
             android:text="+"
-            android:tag="+"
+            android:tag="plus"
             app:cornerRadius="@dimen/corner_radius" />
 
         <Button
