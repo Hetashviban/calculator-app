@@ -1,3 +1,19 @@
+/*
+Author's name: Hetashvi Ban
+StudentID: 200541827
+Date: 16th June, 2024
+*/
+
+/*
+File name: Calculator App - functionality
+App Description: The Simple Calculator App is designed to provide users with a straightforward and efficient tool
+for performing basic arithmetic operations. Developed using Android Studio and the Kotlin programming language,
+this app focuses on creating an intuitive user interface (UI) suitable for both integer and floating-point calculations.
+This document outlines the UI design and functionality for the app, which is optimized for portrait orientation on Android devices.
+*/
+
+//Version Information: https://github.com/Hetashviban/calculator-app
+
 package com.georgiancollege.calculator
 
 import android.os.Bundle
