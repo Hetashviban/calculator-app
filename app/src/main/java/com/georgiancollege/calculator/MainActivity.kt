@@ -23,6 +23,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.georgiancollege.calculator.databinding.ActivityMainBinding
 
+//MainActivity class for the Calculator app.
 class MainActivity : AppCompatActivity() {
     // Late initialization for the binding object
     private lateinit var binding: ActivityMainBinding
@@ -33,7 +34,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Create a reference to the ActivityMainBinding class object
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         enableEdgeToEdge()
@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         setListeners()
     }
 
+    //Function to set listeners for each button
     private fun setListeners() {
         // Number buttons
         val numberButtons = listOf(
@@ -76,6 +77,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Handles clicks on number buttons.
     private fun numberButtonClicked(tag: String) {
         when (tag) {
             "." -> if (!operand.contains(".")) operand += "."
@@ -86,6 +88,7 @@ class MainActivity : AppCompatActivity() {
         updateResultTextView()
     }
 
+    //Handles clicks on operator buttons.
     private fun operatorButtonClicked(tag: String) {
         when (tag) {
             "C" -> clearOperand()
@@ -96,6 +99,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Handles the selected operator.
     private fun handleOperator(operator: String) {
         if (currentNumber.isNotEmpty() && currentOperator.isNotEmpty()) {
             performCalculation()
@@ -105,6 +109,7 @@ class MainActivity : AppCompatActivity() {
         operand = "0"
     }
 
+    //Performs the calculation based on the current operator.
     private fun performCalculation() {
         if (currentNumber.isNotEmpty() && currentOperator.isNotEmpty()) {
             when (currentOperator) {
@@ -119,6 +124,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Adds the current number and the operand.
     private fun add() {
         operand = if (currentNumber.contains(".") || operand.contains(".")) {
             (currentNumber.toFloat() + operand.toFloat()).toString()
@@ -131,6 +137,7 @@ class MainActivity : AppCompatActivity() {
         updateResultTextView()
     }
 
+    //Subtracts the operand from the current number.
     private fun subtract() {
         operand = if (currentNumber.contains(".") || operand.contains(".")) {
             (currentNumber.toFloat() - operand.toFloat()).toString()
@@ -143,6 +150,7 @@ class MainActivity : AppCompatActivity() {
         updateResultTextView()
     }
 
+    //Multiplies the current number and the operand.
     private fun multiply() {
         operand = if (currentNumber.contains(".") || operand.contains(".")) {
             (currentNumber.toFloat() * operand.toFloat()).toString()
@@ -155,6 +163,7 @@ class MainActivity : AppCompatActivity() {
         updateResultTextView()
     }
 
+    // Divides the current number by the operand.
     private fun divide() {
         if (operand == "0") {
             operand = "Error" // Handling division by zero
@@ -168,6 +177,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    //percent operator
     private fun percentage() {
         operand = (operand.toFloat() / 100).toString()
         if (operand.endsWith(".0")) {
@@ -176,11 +186,13 @@ class MainActivity : AppCompatActivity() {
         updateResultTextView()
     }
 
+    //Clears the operand.
     private fun clearOperand() {
         operand = "0"
         updateResultTextView()
     }
 
+    //Deletes the last digit of the operand.
     private fun deleteLastDigit() {
         if (operand.length == 2 && operand.startsWith("-")) {
             operand = "0"
@@ -190,6 +202,7 @@ class MainActivity : AppCompatActivity() {
         updateResultTextView()
     }
 
+    //Toggles the operand between positive and negative.
     private fun togglePlusMinus() {
         if (operand != "0") {
             operand = if (operand.startsWith("-")) operand.substring(1) else "-$operand"
@@ -197,6 +210,7 @@ class MainActivity : AppCompatActivity() {
         updateResultTextView()
     }
 
+    //Updates the result TextView with the current operand.
     private fun updateResultTextView() {
         binding.resultTextView.text = operand
     }
